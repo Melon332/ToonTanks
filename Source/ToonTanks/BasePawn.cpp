@@ -1,7 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Components/CapsuleComponent.h"
-#include "TimerManager.h"
 #include "Projectile.h"
 #include "Kismet/GameplayStatics.h"
 #include "BasePawn.h"
@@ -18,6 +17,7 @@ ABasePawn::ABasePawn()
 	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BaseMesh"));
 	TurretMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("TurretMesh"));
 	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>(TEXT("Projectile"));
+
 
 	
 	BaseMesh->SetupAttachment(CapsuleComponent);
