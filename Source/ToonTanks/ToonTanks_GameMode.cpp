@@ -55,16 +55,20 @@ void AToonTanks_GameMode::HandleGameStart()
 	MainPlayer = Cast<ATank>(UGameplayStatics::GetPlayerPawn(this, 0));
 	TanksPlayerController = Cast<AToonTanksPlayerController>(UGameplayStatics::GetPlayerController(this,0));
 
+	TanksPlayerController->SetPlayerEnableState(false);
+
 	StartGame();
 
-	if(TanksPlayerController)
+	if(TanksPlayerController && !IsInMainMenu)
 	{
-		TanksPlayerController->SetPlayerEnableState(false);
-
 		FTimerHandle PlayerEnableTimerHandle;
 
-		FTimerDelegate TimerDelegate = FTimerDelegate::CreateUObject(TanksPlayerController, &AToonTanksPlayerController::SetPlayerEnableState,true);
+		FTimerDelegate TimerDelegate = FTimerDelegate::CreateUObject(TanksPlayerController, &AToonTanksPlayerController::SetPlayerEnableState, true);
 
 		GetWorldTimerManager().SetTimer(PlayerEnableTimerHandle,TimerDelegate,StartDelay,false);
+
+		TanksPlayerController->SetInputMode(FInputModeGameAndUI());
 	}
+	
+	
 }

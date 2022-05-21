@@ -37,5 +37,8 @@ private:
 	int32 TurretAmount{0};
 	int32 GetTargetTurretCount();
 
+	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+	bool IsInMainMenu;
+
 	void HandleGameStart();
 };
