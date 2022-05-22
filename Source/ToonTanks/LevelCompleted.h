@@ -4,17 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "HealthComponent.generated.h"
+#include "LevelCompleted.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class TOONTANKS_API UHealthComponent : public UActorComponent
+class TOONTANKS_API ULevelCompleted : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UHealthComponent();
+	ULevelCompleted();
 
 protected:
 	// Called when the game starts
@@ -24,15 +24,11 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	void LevelCompleted();
+
 private:
-	UPROPERTY(EditAnywhere, Category="Health Properties")
-	float MaxHealth{100};
 
-	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = "true"), VisibleAnywhere)
-	float CurrentHealth{};
-
-	UFUNCTION()
-	void DamageTaken(AActor* DamageActor, float Damage, const UDamageType* DamageType, AController* Instigator, AActor* DamageCauser);
-
-	class AToonTanks_GameMode* ToonTanks_GameMode{};
+	UPROPERTY(EditAnywhere)
+	FName NextLevelName;
+		
 };

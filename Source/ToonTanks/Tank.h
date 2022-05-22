@@ -41,7 +41,7 @@ public:
 	void SetDefaultAttackDamage() { Damage = DefaultDamage;}
 
 	//ATTACKSPEED BUFF
-	void BoostAttackSpeed(float fAttackSpeedBuff) {FireRate -= fAttackSpeedBuff;}
+	void BoostAttackSpeed(float fAttackSpeedBuff);
 
 	void SetDefaultAttackSpeed() { FireRate = DefaultFireRate;}
 
@@ -77,5 +77,7 @@ private:
 
 	void Move(float value);
 	void Rotate(float value);
+
+	void QuitGame();
 	
 };

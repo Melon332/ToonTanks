@@ -6,6 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 ATank::ATank()
 {
@@ -16,6 +17,16 @@ ATank::ATank()
 	CameraComponent->SetupAttachment(SpringArmComponent);
 }
 
+
+void ATank::BoostAttackSpeed(float fAttackSpeedBuff)
+{
+	if(FireRate - fAttackSpeedBuff <= 0)
+	{
+		FireRate = 0.1;
+		return;
+	}
+	FireRate -= fAttackSpeedBuff;
+}
 
 void ATank::BeginPlay()
 {
@@ -34,14 +45,16 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAxis(TEXT("MoveForward"),this,&ATank::Move);
 	PlayerInputComponent->BindAxis(TEXT("Turn"),this, &ATank::Rotate);
 	PlayerInputComponent->BindAction(TEXT("Fire"), IE_Pressed,this, &ATank::Fire);
+	PlayerInputComponent->BindAction(TEXT("QuickQuit"),IE_Pressed,this,&ATank::QuitGame);
 }
 
 void ATank::Fire()
 {
 	if(CanFire)
 	{
-		SetFire(false);
 		Super::Fire();
+		SetFire(false);
+		UE_LOG(LogTemp,Warning,TEXT("I have shoot"));
 		FTimerHandle FireReset;
 
 		FTimerDelegate FireTimer = FTimerDelegate::CreateUObject(this, &ATank::SetFire, true);
@@ -98,6 +111,11 @@ void ATank::Rotate(float value)
 	rotation.Yaw = value * RotationSpeed * DT;
 	
 	AddActorLocalRotation(rotation,true);
+}
+
+void ATank::QuitGame()
+{
+	UKismetSystemLibrary::QuitGame(this, TankController, EQuitPreference::Quit, false);
 }
 
 

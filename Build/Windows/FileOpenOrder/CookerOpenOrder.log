@@ -631,31 +631,33 @@
 "C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Blueprints/Pawns/BP_TurretPawn.uexp" 630
 "../../../Engine/Content/BasicShapes/Cube.uasset" 631
 "../../../Engine/Content/BasicShapes/Cube.uexp" 632
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_M.ubulk" 633
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_M.uasset" 634
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_M.uexp" 635
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Basic/MakeSet.uasset" 636
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Basic/MakeSet.uexp" 637
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Basic/BreakSet.uasset" 638
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Basic/BreakSet.uexp" 639
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Texture/Tex_SimpleGrid.uasset" 640
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Texture/Tex_SimpleGrid.uexp" 641
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Sign.uasset" 642
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Sign.uexp" 643
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_N.ubulk" 644
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_N.uasset" 645
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_N.uexp" 646
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Round.uasset" 647
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Round.uexp" 648
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Texture/Dye_SingleColor.uasset" 649
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Texture/Dye_SingleColor.uexp" 650
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/UV/UV_SetupGrid.uasset" 651
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/UV/UV_SetupGrid.uexp" 652
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/UV/UV_ObjectScalable.uasset" 653
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/UV/UV_ObjectScalable.uexp" 654
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Base/M_GridBase.uasset" 655
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Base/M_GridBase.uexp" 656
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Base/M_Grid_Inst.uasset" 657
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Base/M_Grid_Inst.uexp" 658
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Maps/Main.uexp" 659
-"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Maps/Main.umap" 660
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Blueprints/Actors/PowerUps/AttackPowerUp.uasset" 633
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Blueprints/Actors/PowerUps/AttackPowerUp.uexp" 634
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_M.ubulk" 635
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_M.uasset" 636
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_M.uexp" 637
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Basic/MakeSet.uasset" 638
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Basic/MakeSet.uexp" 639
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Basic/BreakSet.uasset" 640
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Basic/BreakSet.uexp" 641
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Texture/Tex_SimpleGrid.uasset" 642
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Texture/Tex_SimpleGrid.uexp" 643
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Sign.uasset" 644
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Sign.uexp" 645
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_N.ubulk" 646
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_N.uasset" 647
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Textures/T_BasicGrid_N.uexp" 648
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Round.uasset" 649
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Round.uexp" 650
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Texture/Dye_SingleColor.uasset" 651
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/Texture/Dye_SingleColor.uexp" 652
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/UV/UV_SetupGrid.uasset" 653
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/UV/UV_SetupGrid.uexp" 654
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/UV/UV_ObjectScalable.uasset" 655
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Functions/UV/UV_ObjectScalable.uexp" 656
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Base/M_GridBase.uasset" 657
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Base/M_GridBase.uexp" 658
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Base/M_Grid_Inst.uasset" 659
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Assets/Materials/Base/M_Grid_Inst.uexp" 660
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Maps/Main.uexp" 661
+"C:/Users/Mehme/Documents/Unreal Projects/ToonTanks/Content/Maps/Main.umap" 662

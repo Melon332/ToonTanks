@@ -16,6 +16,7 @@ class TOONTANKS_API AToonTanksPlayerController : public APlayerController
 
 public:
 	void SetPlayerEnableState(bool bPlayerEnabled);
+	void SetInputModeGameOnly(bool InConsumeCaptureMouseDown);
 protected:
 private:
 };

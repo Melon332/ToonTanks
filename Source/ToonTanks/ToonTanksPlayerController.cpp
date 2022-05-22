@@ -15,3 +15,11 @@ void AToonTanksPlayerController::SetPlayerEnableState(bool bPlayerEnabled)
 	}
 	bShowMouseCursor = bPlayerEnabled;
 }
+
+void AToonTanksPlayerController::SetInputModeGameOnly(bool InConsumeCaptureMouseDown)
+{
+	FInputModeGameOnly InputMode;
+	InputMode.SetConsumeCaptureMouseDown(
+		InConsumeCaptureMouseDown);
+	SetInputMode(InputMode);
+}

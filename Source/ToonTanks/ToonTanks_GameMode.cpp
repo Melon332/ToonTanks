@@ -3,11 +3,17 @@
 
 #include "ToonTanks_GameMode.h"
 
+#include "LevelCompleted.h"
 #include "Tank.h"
 #include "ToonTanksPlayerController.h"
 #include "Kismet/GameplayStatics.h"
 #include "Turret.h"
 
+
+AToonTanks_GameMode::AToonTanks_GameMode()
+{
+	LevelComplete = CreateDefaultSubobject<ULevelCompleted>(TEXT("Level Completed"));
+}
 
 void AToonTanks_GameMode::BeginPlay()
 {
@@ -34,6 +40,7 @@ void AToonTanks_GameMode::ActorDied(AActor* DeadActor)
 		if(TurretAmount <= 0)
 		{
 			GameOver(true);
+			LevelComplete->LevelCompleted();
 			if(TanksPlayerController)
 			{
 				TanksPlayerController->SetPlayerEnableState(false);
@@ -68,8 +75,8 @@ void AToonTanks_GameMode::HandleGameStart()
 
 		GetWorldTimerManager().SetTimer(PlayerEnableTimerHandle,TimerDelegate,StartDelay,false);
 
-		TanksPlayerController->SetInputMode(FInputModeGameAndUI());
+		TanksPlayerController->SetInputModeGameOnly(false);
 	}
-	
-	
+
 }
+	

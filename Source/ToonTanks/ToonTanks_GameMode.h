@@ -18,6 +18,8 @@ class TOONTANKS_API AToonTanks_GameMode : public AGameModeBase
 public:
 	void ActorDied(AActor* DeadActor);
 
+	AToonTanks_GameMode();
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -39,6 +41,9 @@ private:
 
 	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	bool IsInMainMenu;
+
+	UPROPERTY(EditAnywhere)
+	class ULevelCompleted* LevelComplete;
 
 	void HandleGameStart();
 };
