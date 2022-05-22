@@ -11,6 +11,8 @@ ABasePawn::ABasePawn()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	//Setup Pawn
+	
 	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule Collider"));
 	RootComponent = CapsuleComponent;
 
@@ -24,12 +26,17 @@ ABasePawn::ABasePawn()
 	TurretMesh->SetupAttachment(BaseMesh);
 	ProjectileSpawnPoint->SetupAttachment(TurretMesh);
 	
+	
 }
 
 // Called when the game starts or when spawned
 void ABasePawn::BeginPlay()
 {
 	Super::BeginPlay();
+
+	Damage = DefaultDamage;
+
+	FireRate = DefaultFireRate;
 }
 
 // Called every frame

@@ -23,6 +23,8 @@ void ATank::BeginPlay()
 
 	//DIFFERENT WAY OF GETTING PLAYER CONTROLLER = UGameplayStatics::GetPlayerController(GetWorld(),0);
 	TankController = Cast<APlayerController>(GetController());
+
+	CurrentSpeed = DefaultSpeed;
 }
 
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -82,7 +84,7 @@ void ATank::Move(float value)
 	float DT = UGameplayStatics::GetWorldDeltaSeconds(this);
 	
 	//X = value * DeltaTime * Speed;
-	DeltaLocation.X = value * DT * Speed; 
+	DeltaLocation.X = value * DT * CurrentSpeed; 
 
 	AddActorLocalOffset(DeltaLocation, true);
 }

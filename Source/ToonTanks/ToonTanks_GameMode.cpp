@@ -59,6 +59,7 @@ void AToonTanks_GameMode::HandleGameStart()
 
 	StartGame();
 
+	//Check if we are in the main menu, if we aren't then start the timer countdown.
 	if(TanksPlayerController && !IsInMainMenu)
 	{
 		FTimerHandle PlayerEnableTimerHandle;

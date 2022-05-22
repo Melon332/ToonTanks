@@ -19,8 +19,17 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditDefaultsOnly, Category="Combat")
+	UPROPERTY(VisibleAnywhere, Category="TestStuff")
 	float FireRate{3.f};
+
+	UPROPERTY(EditDefaultsOnly, Category="Combat")
+	float DefaultFireRate{3.f};
+
+	UPROPERTY(VisibleAnywhere, Category="TestStuff")
+	float Damage{10};
+
+	UPROPERTY(EditAnywhere, Category="Combat")
+	float DefaultDamage;
 	
 	FTimerHandle FireRateHandler;
 
@@ -39,6 +48,8 @@ public:
 
 	virtual void HandleDestruction();
 
+	void SetDamage(float fDamage) { Damage = fDamage;}
+
 private:
 	UPROPERTY(VisibleDefaultsOnly, Category="Components", BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	class UCapsuleComponent* CapsuleComponent;
@@ -54,10 +65,7 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, Category= "Combat")
 	TSubclassOf<class AProjectile> ProjectileClass;
-
-	UPROPERTY(EditDefaultsOnly, Category="Combat")
-	float Damage{10};
-
+	
 	UPROPERTY(EditDefaultsOnly, Category="Particles")
 	UParticleSystem* DeathEffect;
 

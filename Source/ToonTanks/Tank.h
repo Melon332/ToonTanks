@@ -28,6 +28,23 @@ public:
 
 	bool IsAlive() { return bAlive; }
 
+	
+	//SPEED BUFF
+	void BoostSpeed(float fSpeed) {CurrentSpeed += fSpeed;}
+
+	void SetDefaultSpeed() { CurrentSpeed = DefaultSpeed;}
+
+	
+	//ATTACK BUFF
+	void BoostAttack(float fAttackBuff) {Damage += fAttackBuff;}
+
+	void SetDefaultAttackDamage() { Damage = DefaultDamage;}
+
+	//ATTACKSPEED BUFF
+	void BoostAttackSpeed(float fAttackSpeedBuff) {FireRate -= fAttackSpeedBuff;}
+
+	void SetDefaultAttackSpeed() { FireRate = DefaultFireRate;}
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -42,7 +59,10 @@ private:
 	class USpringArmComponent* SpringArmComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category="Movement")
-	float Speed;
+	float DefaultSpeed;
+
+	UPROPERTY(VisibleAnywhere, Category="TestStuff")
+	float CurrentSpeed;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category="Movement")
 	float RotationSpeed;
