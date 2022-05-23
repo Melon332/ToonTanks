@@ -34,8 +34,13 @@ void ULevelCompleted::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 	// ...
 }
 
-void ULevelCompleted::LevelCompleted()
+void ULevelCompleted::LevelCompleted(int32 LevelNumber)
 {
-	UGameplayStatics::OpenLevel(this, NextLevelName);
+	if(LevelNumber > NextLevelName.Num())
+	{
+		UE_LOG(LogTemp,Warning,TEXT("WARNING! The number was bigger than the list of levels!!! Add it if you which to traverse to a new level!"))
+		return;
+	}
+	UGameplayStatics::OpenLevel(this, NextLevelName[LevelNumber], false);
 }
 

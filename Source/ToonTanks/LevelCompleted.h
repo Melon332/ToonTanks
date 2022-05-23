@@ -24,11 +24,11 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	void LevelCompleted();
+	void LevelCompleted(int32 LevelNumber);
 
 private:
 
 	UPROPERTY(EditAnywhere)
-	FName NextLevelName;
+	TArray<FName> NextLevelName;
 		
 };

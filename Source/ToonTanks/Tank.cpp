@@ -54,7 +54,6 @@ void ATank::Fire()
 	{
 		Super::Fire();
 		SetFire(false);
-		UE_LOG(LogTemp,Warning,TEXT("I have shoot"));
 		FTimerHandle FireReset;
 
 		FTimerDelegate FireTimer = FTimerDelegate::CreateUObject(this, &ATank::SetFire, true);

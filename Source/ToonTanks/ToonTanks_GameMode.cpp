@@ -4,6 +4,7 @@
 #include "ToonTanks_GameMode.h"
 
 #include "LevelCompleted.h"
+#include "MainGameInstance.h"
 #include "Tank.h"
 #include "ToonTanksPlayerController.h"
 #include "Kismet/GameplayStatics.h"
@@ -20,6 +21,12 @@ void AToonTanks_GameMode::BeginPlay()
 	Super::BeginPlay();
 
 	HandleGameStart();
+	
+	if(!CurrentGameInstance)
+	{
+		CurrentGameInstance = Cast<UMainGameInstance>(UGameplayStatics::GetGameInstance(this));
+		UE_LOG(LogTemp,Warning,TEXT("Got Game Instance"));
+	}
 }
 
 void AToonTanks_GameMode::ActorDied(AActor* DeadActor)
@@ -40,7 +47,7 @@ void AToonTanks_GameMode::ActorDied(AActor* DeadActor)
 		if(TurretAmount <= 0)
 		{
 			GameOver(true);
-			LevelComplete->LevelCompleted();
+			FinishLevel();
 			if(TanksPlayerController)
 			{
 				TanksPlayerController->SetPlayerEnableState(false);
@@ -78,5 +85,11 @@ void AToonTanks_GameMode::HandleGameStart()
 		TanksPlayerController->SetInputModeGameOnly(false);
 	}
 
+}
+
+void AToonTanks_GameMode::FinishLevel()
+{
+	LevelComplete->LevelCompleted(CurrentGameInstance->GetNextLevel());
+	CurrentGameInstance->AdvanceNextLevel();
 }
 	

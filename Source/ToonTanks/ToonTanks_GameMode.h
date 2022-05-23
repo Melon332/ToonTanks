@@ -45,5 +45,12 @@ private:
 	UPROPERTY(EditAnywhere)
 	class ULevelCompleted* LevelComplete;
 
+	UPROPERTY(VisibleAnywhere)
+	int32 NextLevelNumber{0};
+
+	class UMainGameInstance* CurrentGameInstance;
+
 	void HandleGameStart();
+
+	void FinishLevel();
 };
